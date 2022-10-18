@@ -8,7 +8,7 @@ jobs:
         uses: actions/checkout@v3
       - name: Build docker images
         run: |
-          docker build -t local < ./Dockerfile
+          docker build -t local -f ./Dockerfile .
       - name: Install dependencies
         run: |
           make install
